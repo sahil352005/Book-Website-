@@ -1,0 +1,60 @@
+.grid-container {
+  background: url(https://static.vecteezy.com/system/resources/previews/009/888/745/original/books-seamless-pattern-hand-drawn-doodle-style-minimalism-monochrome-sketch-wallpaper-textile-wrapping-paper-background-reading-education-bookstore-science-vector.jpg);
+  backdrop-filter: blur(5px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  gap: 30px;
+  padding: 50px 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-card {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  text-align: center;
+  height: 420px;
+  cursor: pointer;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+  animation-duration: 1s;
+}
+
+.book-card img {
+  height: 250px;
+  width: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.book-title {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  color: #333;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.book-author {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.book-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 5px;
+}

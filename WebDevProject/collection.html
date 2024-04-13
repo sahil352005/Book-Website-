@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookBazaar - Collection</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/card.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="left">
+        <ul>
+          <a href="index.php">
+            <li>Home</li>
+          </a>
+          <a href="about.html">
+            <li>About</li>
+          </a>
+          <a href="collection.html">
+            <li>Collection</li>
+          </a>
+          <a href="contact.html">
+            <li>Contact</li>
+          </a>
+        </ul>
+      </div>
+      <div class="right">
+        <a href="register.html">Register</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="grid-container">
+    <div class="book-card">
+
+      
+      <head>
+      <script src="jsquery.js"></script>
+      <script>
+        $(document).ready(function() { 
+
+            $('img').hide();
+            $('img').each(function(i) {
+                if (this.complete) {
+                    $(this).fadeIn(5000);
+                } else {
+                    $(this).load(function() {
+                        $(this).fadeIn();
+                    });
+                }
+            });
+        });
+      </script>
+      </head>
+      
+         <img src="https://th.bing.com/th/id/OIP.ch7a0vjrCESMyoSRg0T3MQHaLH?w=203&h=304&c=7&r=0&o=5&pid=1.7">
+      <alt="Harry Potter and the Philosopher's Stone">
+      <h3 class="book-title">Harry Potter and the Philosopher's Stone</h3>
+      <p class="book-author">J.K. Rowling</p>
+      <p class="book-price">₹499</p>
+    </div>
+
+    <div class="book-card">
+      <img src="https://th.bing.com/th/id/OIP.kCRWcP7YvYe4DJFkHsV4rgHaLH?w=203&h=304&c=7&r=0&o=5&pid=1.7"
+        alt="The Lord of the Rings: The Fellowship of the Ring">
+      <h3 class="book-title">The Lord of the Rings: The Fellowship of the Ring</h3>
+      <p class="book-author">J.R.R. Tolkien</p>
+        <p class="book-price">₹299</p>
+    </div>
+
+    <div class="book-card">
+      <img src="https://th.bing.com/th/id/OIP.L_ieAfkq1D0JDqyszJ1hwAHaHa?w=150&h=180&c=7&r=0&o=5&pid=1.7"
+        alt="The Blue Umbrella">
+      <h3 class="book-title">The Blue Umbrella</h3>
+      <p class="book-author">Ruskin Bond</p>
+        <p class="book-price">₹259</p>
+    </div>
+
+  <div class="book-card">
+    <img src="https://th.bing.com/th/id/OIP.wBN5RCV_nTO1WJmXnmDhNgAAAA?w=200&h=311&c=7&r=0&o=5&pid=1.7" alt="Book 1">
+    <h3 class="book-title">When I Am With You</h3>
+    <p class="book-author">Durjoy Datta</p>
+    <p class="book-price">₹169</p>
+  </div>
+
+  <div class="book-card">
+    <img src="https://th.bing.com/th/id/OIP.W-Wq30-sxUi2h4bmWinMowHaLk?w=115&h=180&c=7&r=0&o=5&pid=1.7"
+      alt="One Day, Life Will Change">
+    <h3 class="book-title">One Day, Life Will Change</h3>
+    <p class="book-author">Saranya Umakanthan</p>
+    <p class="book-price">₹199</p>
+  </div>
+
+  <div class="book-card">
+    <img src="https://m.media-amazon.com/images/I/513O5F4khKS.jpg"
+      alt="How the Earth got its Beauty">
+    <h3 class="book-title">How the Earth got its Beauty</h3>
+    <p class="book-author">Sudha Murty</p>
+    <p class="book-price">₹299</p>
+  </div>
+
+  <div class="book-card">
+    <img src="https://th.bing.com/th/id/OIP.FlhYDF9jM3CF_vDsLfixnQHaLG?w=203&h=304&c=7&r=0&o=5&pid=1.7"
+      alt="Regretting You">
+    <h3 class="book-title">Regretting You</h3>
+    <p class="book-author">Colleen Hoover</p>
+    <p class="book-price">₹281</p>
+  </div>
+
+  <div class="book-card">
+    <img src="https://th.bing.com/th/id/OIP.Pf09E8ybJ4f4VR_D1p5FrgHaLH?w=203&h=304&c=7&r=0&o=5&pid=1.7"
+      alt="Percy Jackson & the Olympians: The Lightning Thief">
+    <h3 class="book-title">Percy Jackson & the Olympians: The Lightning Thief</h3>
+    <p class="book-author">Rick Riordan</p>
+    <p class="book-price">₹191</p>
+  </div>
+
+  <div class="book-card">
+    <img src="https://m.media-amazon.com/images/I/81Ls+SBCLiL._AC_UF1000,1000_QL80_.jpg" alt="Book 1">
+    <h3 class="book-title">Atomic Habits</h3>
+    <p class="book-author">James Clear</p>
+    <p class="book-price">₹399</p>
+  </div>
+</div>
+
+
+  <footer class="footer">
+    <p>Copyright &copy; 2023 BookBazaar. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register on BookBazaar</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="left">
+        <ul>
+          <a href="index.html">
+            <li>Home</li>
+          </a>
+          <a href="about.html">
+            <li>About</li>
+          </a>
+          <a href="collection.html">
+            <li>Collection</li>
+          </a>
+          <a href="contact.html">
+            <li>Contact</li>
+          </a>
+        </ul>
+      </div>
+      <div class="right">
+        <a href="signin.html">Sign In</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="form">
+    <form id="registrationForm" onsubmit="return validateAndConfirmSubmission()" action="index.html">
+      <h1>Register</h1>
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="fname" placeholder="Enter your First name" required>
+      
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lname" placeholder="Enter your Last name" required>
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="dob">Date of Birth</label> 
+      <input type="date"  id="dob" name="dob"  placeholder="Enter your DOB" max="" required> 
+      
+      <label for="password">Create Password</label>
+      <input type="password" id="password" name="password" placeholder="Create a new Password" minlength="8">
+
+      <label for="again">Re-enter your Password</label>
+      <input type="password" id="again" name="password" placeholder="Enter your Password Again" minlength="8">
+
+      <label for="gender">Gender</label>
+      <div class="gender">
+        <input type="radio" name="gender" id="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="other">
+        <label for="other">Other</label>
+      </div>  
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your Phone Number" pattern="\d*" minlength="10" maxlength="10" required>
+6
+      <label for="genres">Genres you like the most:</label>
+      <select id="genres" name="genres" required>
+        <option value="" selected disabled>Select a Genre</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Mystery">Mystery</option>
+        <option value="Romance">Romance</option>
+        <option value="Thriller">Thriller</option>
+        <option value="Horror">Horror</option>
+        <option value="selfhelp">Self Help</option>
+        <option value="fiction">Fiction</option>
+        <option value="science-fiction">Science Fiction</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="non-fiction">Non-Fiction</option>
+      </select>
+
+      <label for="rating">How much would you Rate the Genre selected:</label>
+      <input type="range" id="rating" name="rating" min="0" max="10" step="1" value="0" required>
+
+      <label for="bio">Bio:</label>
+      <textarea id="bio" name="bio" rows="3" placeholder="Write something about yourself"></textarea>
+
+      <label for="coverImage">Cover Image:</label>
+      <input type="file" id="coverImage" name="coverImage" accept="image/*">
+
+      <label for="website">Enter any Profile URL: (LinkedIn, Instagram, Twitter, etc.)</label>
+      <input type="url" id="website" name="website" required>
+
+      <label for="color">Favorite Color:</label>
+      <input type="color" id="color" name="color" value="#ffffff" required>
+
+      <label>
+        <input type="checkbox" id="agree" name="agree" required>
+        I agree to the Terms and Conditions of this Website.
+      </label>
+      
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <footer class="footer">
+    <p>Copyright &copy; 2023 BookBazaar. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById("dob").max = today;
+    
+    function validateAndConfirmSubmission() {
+      if (validateForm() && confirmSubmission()) {
+        window.location.replace("index.html");
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function validateForm() {
+      var fname = document.getElementById("fname").value;
+      var lname = document.getElementById("lname").value;
+      var email = document.getElementById("email").value;
+      var dob = document.getElementById("dob").value;
+      var password = document.getElementById("password").value;
+      var again = document.getElementById("again").value;
+      var gender = document.querySelector('input[name="gender"]:checked');
+      var phone = document.getElementById("phone").value;
+      var genres = document.getElementById("genres").value;
+      var rating = document.getElementById("rating").value;
+      var bio = document.getElementById("bio").value;
+      var website = document.getElementById("website").value;
+      var color = document.getElementById("color").value;
+      var agree = document.getElementById("agree").checked;
+
+      if (!fname || !lname || !email || !dob || !password || !again || !gender || !phone || !genres || !rating || !bio || !website || !color || !agree) {
+        alert("Please fill out all required fields.");
+        return false;
+      }
+
+      if (password !== again) {
+        alert("Passwords do not match.");
+        return false;
+      }
+
+      if (!gender) {
+        alert("Please select a gender.");
+        return false;
+      }
+
+      return true;
+    }
+
+    function confirmSubmission() {
+      var isSure = confirm("Are you sure you want to submit?");
+      return isSure;
+    }
+    
+  </script>
+</body>
+</html>
